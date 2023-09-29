@@ -1,0 +1,33 @@
+sửa services
+
+return axios({
+        method: "POST",
+        url: BASE_URL.concat("/create"),
+        data: {
+            name, 
+            studentCode,
+            address,
+            email,
+            className
+        }
+    })
+
+
+export const listUserApi = () => {
+    return axios({
+        method: "GET",
+        url: BASE_URL.concat('/get.....')
+    })
+}
+
+màn task: try {
+            const { data } = await listUserApi()
+            setTasks(data.items)
+        } catch(err) {
+            const errorMessage = err.response
+            alert(errorMessage)
+        }
+        setRefreshing(false)
+
+
+HANOI UNIVERSITY OF CIVIL ENGINEERING
